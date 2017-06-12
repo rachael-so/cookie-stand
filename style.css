@@ -1,0 +1,35 @@
+h1, h2, h3, h4 {
+  font-family: Abril Fatface, cursive;
+  color: #334290;
+}
+
+p {
+  font-family: Georgia;
+  color: #C34212;
+}
+
+ul {
+  font-family: Helvetica;
+  color: #129922
+}
+
+span {
+  font-style: italic;
+  color: #AD99DD;
+}
+
+#email {
+  color: green;
+  background-color: white;
+  padding: 5px
+}
+
+body {
+  background-color: #ABCDCA;
+}
+
+span {
+  position: relative;
+  background-color: black;
+  padding: 5px;
+}
