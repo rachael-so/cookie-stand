@@ -39,16 +39,16 @@ Store.prototype.render = function() {
 
   var tdEl = document.createElement('td');
   tdEl.textContent = this.loc;
-  theTable.appendChild(tdEl);
+  trEl.appendChild(tdEl);
 
   for (var i = 0; i < hours.length; i++) {
     var tdEL = document.createElement('td');
     tdEL.textContent = this.cookiesEachHour[i] + ' cookies';
-    theTable.appendChild(tdEL);
+    trEl.appendChild(tdEL);
   }
   var tdEL = document.createElement('td');
   tdEL.textContent = this.totalCookies + ' cookies';
-  theTable.appendChild(tdEL);
+  trEl.appendChild(tdEL);
 
   theTable.appendChild(trEl);
 };
