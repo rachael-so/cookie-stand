@@ -1,0 +1,21 @@
+body {
+  background-image: url(https://www.bypeople.com/wp-content/uploads/2014/05/light-live-background-css.jpg);
+}
+
+table {
+	border: 10px solid orange;
+}
+td {
+  font-family: monospace;
+  font-size: 15px;
+	padding: 10px;
+  background-color: #998990;
+  text-align: right;
+}
+th {
+  font-family: impact;
+  padding: 10px;
+  background-color: #9191AA;
+  text-align: center;
+  vertical-align: bottom;
+}
