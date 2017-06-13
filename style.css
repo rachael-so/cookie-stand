@@ -1,3 +1,7 @@
+* {
+  text-align: center;
+}
+
 h1, h2, h3, h4 {
   font-family: Abril Fatface, cursive;
   color: #334290;
@@ -10,7 +14,11 @@ p {
 
 ul {
   font-family: Helvetica;
-  color: #129922
+  color: #129922;
+}
+
+li {
+  list-style-position: inside;
 }
 
 span {
@@ -32,4 +40,9 @@ span {
   position: relative;
   background-color: black;
   padding: 5px;
+}
+
+img {
+  margin: auto;
+  display: block;
 }
