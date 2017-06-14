@@ -19,3 +19,21 @@ th {
   text-align: center;
   vertical-align: bottom;
 }
+
+fieldset {
+  border: 2px solid #9191AA;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+legend {
+  font-weight: bold;
+  font-family: impact;
+  font-size: 20px;
+}
+
+label {
+  padding: 5px;
+  font-family: monospace;
+  font-size: 15px;
+}
