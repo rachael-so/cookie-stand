@@ -3,25 +3,27 @@ body {
 }
 
 table {
-	border: 10px solid orange;
+	border: 10px solid #129922;
 }
 td {
   font-family: monospace;
   font-size: 15px;
 	padding: 10px;
-  background-color: #998990;
+  /*background-color: #998990;*/
+  background-color: #C34212;
   text-align: right;
 }
 th {
   font-family: impact;
   padding: 10px;
-  background-color: #9191AA;
+  /*background-color: #9191AA;*/
+  background-color: #334290;
   text-align: center;
   vertical-align: bottom;
 }
 
 fieldset {
-  border: 2px solid #9191AA;
+  border: 2px solid #334290;
   border-radius: 30px;
   padding: 20px;
   background-color: rgba(210 ,205, 225, .5);

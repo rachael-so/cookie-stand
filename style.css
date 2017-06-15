@@ -1,10 +1,17 @@
 * {
+  /*border: 1px solid black;*/
   text-align: center;
 }
 
 h1, h2, h3, h4 {
   font-family: Abril Fatface, cursive;
   color: #334290;
+}
+
+h1 {
+  display: inline;
+  font-size: 50px;
+  float: center;
 }
 
 p {
@@ -33,7 +40,7 @@ span {
 }
 
 body {
-  background-color: #ABCDCA;
+  background-image: url(https://www.bypeople.com/wp-content/uploads/2014/05/light-live-background-css.jpg);
 }
 
 span {
@@ -42,7 +49,22 @@ span {
   padding: 5px;
 }
 
-img {
-  margin: auto;
+#fish {
+  width: 100px;
+  height: auto;
+  display: inline;
+  float: left;
+}
+
+#salmon {
+  width: 150px;
+  height: auto;
+  display: inline;
+}
+
+#family {
+  height: 100px;
   display: block;
+  display: inline;
+  border-radius: 100%;
 }
