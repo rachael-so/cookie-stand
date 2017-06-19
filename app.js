@@ -36,18 +36,13 @@ Store.prototype.render = function() {
 
   var trEl = document.createElement('tr');
 
-  var tdEl = document.createElement('td');
-  tdEl.textContent = this.loc;
-  trEl.appendChild(tdEl);
+  makeElement('td', this.loc, trEl);
 
   for (var i = 0; i < hours.length; i++) {
-    var tdEL = document.createElement('td');
-    tdEL.textContent = this.cookiesEachHour[i] + ' cookies';
-    trEl.appendChild(tdEL);
+    makeElement('td', this.cookiesEachHour[i] + ' cookies', trEl);
   }
-  var tdEL = document.createElement('td');
-  tdEL.textContent = this.totalCookies + ' cookies';
-  trEl.appendChild(tdEL);
+
+  makeElement('td', this.totalCookies + ' cookies', trEl);
 
   theTable.appendChild(trEl);
 };
@@ -55,19 +50,13 @@ Store.prototype.render = function() {
 function createHeader() {
   var trEl = document.createElement('tr');
 
-  var thEl = document.createElement('th');
-  thEl.textContent = '';
-  trEl.appendChild(thEl);
+  makeElement('th', '', trEl);
 
   for (var i = 0; i < hours.length; i++) {
-    var thEl = document.createElement('th');
-    thEl.textContent = hours[i];
-    trEl.appendChild(thEl);
+    makeElement('th', hours[i], trEl);
   }
 
-  var thEL = document.createElement('th');
-  thEL.textContent = 'Daily Location Total';
-  trEl.appendChild(thEL);
+  makeElement('th', 'Daily Location Total', trEl);
 
   theTable.appendChild(trEl);
 }
@@ -78,9 +67,7 @@ function createFooter() {
 
   var trEl = document.createElement('tr');
 
-  var thEl = document.createElement('th');
-  thEl.textContent = 'Hourly Totals';
-  trEl.appendChild(thEl);
+  makeElement('th', 'Hourly Totals', trEl);
 
   for (var i = 0; i < hours.length; i++) {
     hourlyTotal = 0;
@@ -88,16 +75,18 @@ function createFooter() {
       hourlyTotal += allStores[j].cookiesEachHour[i];
       totalOfTotals += allStores[j].cookiesEachHour[i];
     }
-    var thEl = document.createElement('th');
-    thEl.textContent = hourlyTotal;
-    trEl.appendChild(thEl);
+    makeElement('th', hourlyTotal, trEl);
   }
 
-  var thEl = document.createElement('th');
-  thEl.textContent = totalOfTotals;
-  trEl.appendChild(thEl);
+  makeElement('th', totalOfTotals, trEl);
 
   theTable.appendChild(trEl);
+}
+
+function makeElement(type, content, parent) {
+  var El = document.createElement(type);
+  El.textContent = content;
+  parent.appendChild(El);
 }
 
 function renderAllStores() {
@@ -125,9 +114,6 @@ function handleSubmit(event) {
   var max = parseFloat(event.target.max.value);
   var avg = parseFloat(event.target.avg.value);
 
-  if (!location || !min || !max || !avg) {
-    return alert('fields cannot be empty');
-  }
   if (min < 0 || max < 0 || avg < 0 || min > max) {
     return alert('invalid values');
   }
