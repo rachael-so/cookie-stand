@@ -14,6 +14,10 @@ h1 {
   float: center;
 }
 
+.noUnderline {
+  text-decoration: none;
+}
+
 p {
   font-family: Georgia;
   color: #C34212;
